@@ -10,6 +10,14 @@ module.exports = function (ast) {
             `<a-form-model-item $$$1>$$$2</a-form-model-item>`,
         )
         .replace(
+            `<Form-item $$$1>$$$2</Form-item>`,
+            `<a-form-model-item $$$1>$$$2</a-form-model-item>`,
+        )
+        .replace(
+            `<Form-Item $$$1>$$$2</Form-Item>`,
+            `<a-form-model-item $$$1>$$$2</a-form-model-item>`,
+        )
+        .replace(
             `<a-form-model :label-width="$_$" $$$1>$$$2</a-form-model>`,
             `<a-form-model :label-col="{span:2}" :wrapper-col="{span:22}" $$$1>$$$2</a-form-model>`,
         )

@@ -17,9 +17,9 @@ function transform (fileInfo, api, options) {
     const outAst = rules.reduce((ast, rule) => rule(ast, options), ast);
     return outAst.generate();
 };
+const URL = `D:/SunglinkTek/OSAP-SSP-PC/src/pages/?(Policy|product|zyCloud)/**/*.vue`
 
-
-glob('D:/SunglinkTek/OSAP-SSP-PC/src/pages/zyCloud/**/*.vue', (err, files) => {
+glob(URL, (err, files) => {
     files.forEach((file) => {
         console.log(`加载文件 ${file}`);
         fs.readFile(file, function read(err, code) {

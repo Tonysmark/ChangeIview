@@ -6,6 +6,10 @@ module.exports = function (ast) {
             `<a-button $$$1>$$$2</a-button>`
         )
         .replace(
+            `<i-button $$$1>$$$2</i-button>`,
+            `<a-button $$$1>$$$2</a-button>`
+        )
+        .replace(
             `<ButtonGroup $$$1>$$$2</ButtonGroup>`,
             `<a-button-group $$$1>$$$2</a-button-group>`
         )

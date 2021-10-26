@@ -1,9 +1,10 @@
 module.exports = function (ast) {
+    // TODO  颜色可以重新绑定
     return ast
         .find('<template></template>')
         .replace(
-            `<Progress $$$1>$$$2</Progress>`,
-            `<a-progress $$$1>$$$2</a-progress>`
+            `<Badge $$$1>$$$2</Badge>`,
+            `<a-badge  $$$1>$$$2</a-badge>`
         )
         .root('sfc');
 }

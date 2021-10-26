@@ -1,4 +1,4 @@
-const glob = require('glob');
+
 const $ = require('gogocode');
 const rules = require('../rules')
 const path = require('path');
