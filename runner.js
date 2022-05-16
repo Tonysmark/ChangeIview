@@ -10,14 +10,15 @@ const rules = require('./rules/index');
  * @param {*} options 其他 option 由此传入
  * @returns {string} 返回转换后的代码
  */
-function transform (fileInfo, api, options) {
+function transform(fileInfo, api, options) {
     const sourceCode = fileInfo.source;
     const $ = api.gogocode;
     const ast = $(sourceCode, { parseOptions: { language: 'vue' } });
     const outAst = rules.reduce((ast, rule) => rule(ast, options), ast);
     return outAst.generate();
 };
-const URL = `D:/SunglinkTek/OSAP-SSP-PC/src/pages/?(Policy|product|zyCloud)/**/*.vue`
+// const URL = `D:/Sunglink/OSAP-SSP-PC/src/pages/?(Policy|product|zyCloud)/**/*.vue`
+const URL = `D:/Sunglink/OSAP-SSP-PC/src/pages/?(zyCloud)/**/*.vue`
 
 glob(URL, (err, files) => {
     files.forEach((file) => {
@@ -34,7 +35,6 @@ glob(URL, (err, files) => {
                 {
                     gogocode: $
                 },
-                {}
             );
 
             fs.writeFile(file, outputCode, function (err) {
@@ -46,3 +46,41 @@ glob(URL, (err, files) => {
         });
     })
 })
+
+/**
+ * 要转换的 iview 组件
+ * -[X] Alert
+ * -[X] Avatar
+ * -[X] Badge
+ * -[X] Breadcrumb
+ * -[X] BreadcrumbItem
+ * -[X] Button
+ * -[X] ButtonGroup
+ * -[X] Col
+ * -[] Checkbox
+ * -[] CheckboxGroup
+ * -[] Card
+ * -[] DatePicker
+ * -[] Dropdown
+ * -[] DropdownItem
+ * -[] DropdownMenu
+ * -[] Form
+ * -[] FormItem
+ * -[] Icon
+ * -[] Input
+ * -[] Modal
+ * -[] Option
+ * -[] Poptip
+ * -[] Page
+ * -[] Radio
+ * -[] RadioGroup
+ * -[X] Row
+ * -[] Select
+ * -[] Spin
+ * -[] Tag
+ * -[] Tabs
+ * -[] TabPane
+ * -[] Tooltip
+ * -[] Table
+ * -[] Upload
+ */

@@ -1,7 +1,8 @@
 
 <template>
-    <div>
-      <a-modal :width="700" v-model="handleShowModal"> </a-modal>
-      <a-modal v-model="handleShowModal" width="'700vw'"> </a-modal>
+    <div class="search-container">
+      <Input placeholder="请输入查询">
+        <Button slot="append" icon="ios-search" type="primary"> 搜索 </Button>
+      </Input>
     </div>
 </template>

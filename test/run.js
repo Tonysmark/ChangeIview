@@ -13,7 +13,7 @@ const outputPath = path.resolve(__dirname, './output.vue');
  * @param {*} options 其他 option 由此传入
  * @returns {string} 返回转换后的代码
  */
- function transform (fileInfo, api, options) {
+function transform(fileInfo, api, options) {
     const sourceCode = fileInfo.source;
     const $ = api.gogocode;
     const ast = $(sourceCode, { parseOptions: { language: 'vue' } });

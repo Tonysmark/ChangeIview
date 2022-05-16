@@ -14,8 +14,15 @@ module.exports = function (ast) {
             `<a-button-group $$$1>$$$2</a-button-group>`
         )
         .replace(
-            `<Button slot="append" $$$1>$$$2</Button>`,
-            `<a-button slot="suffix" $$$1>$$$2</a-button>`
+            `<a-button slot="append" $$$1>$$$2</a-butt>`,
+            `<a-button slot="suffix" $$$1>
+            <!-- TODO: 父节点 input 改成 input-search -->
+            $$$2
+            </a-button>`
+        )
+        .replace(
+            `<a-button type="success" $$$1>$$$2</a-button>`,
+            `<a-button type="primary" $$$1>$$$2</a-button>`
         )
         .replace(
             `<a-button icon="ios-search" $$$1>$$$2</a-button>`,

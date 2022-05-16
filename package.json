@@ -16,9 +16,11 @@
     "node": "*"
   },
   "devDependencies": {
-    "gogocode": "^1.0.17"
+    "gogocode": "^1.0.53"
   },
   "dependencies": {
-    "glob": "^7.2.0"
+    "glob": "^7.2.0",
+    "gogocode-plugin-prettier": "^0.0.1",
+    "prettier": "^2.6.2"
   }
 }

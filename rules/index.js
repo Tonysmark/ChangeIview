@@ -1,3 +1,4 @@
+const Alert = require('./Alert');
 const Avatar = require('./Avatar');
 const Badge = require('./Badge');
 const Breadcrumb = require('./Breadcrumb');
@@ -20,26 +21,27 @@ const Tooltip = require('./Tooltip');
 // Table
 
 module.exports = [
+    // Alert,
     Button,
-    Badge,
-    Modal,
-    Input,
-    Avatar,
-    Select,
-    SelectOption,
-    Form,
-    Tabs,
-    PopTip,
-    Tooltip,
-    Progress,
-    Switch,
-    Tooltip,
-    PopTip,
-    Tag,
-    Card,
-    DatePicker,
-    Breadcrumb,
-    Spin
+    // Badge,
+    // Modal,
+    // Input,
+    // Avatar,
+    // Select,
+    // SelectOption,
+    // Form,
+    // Tabs,
+    // PopTip,
+    // Tooltip,
+    // Progress,
+    // Switch,
+    // Tooltip,
+    // PopTip,
+    // Tag,
+    // Card,
+    // DatePicker,
+    // Breadcrumb,
+    // Spin
 ]
 
 /**
@@ -52,7 +54,9 @@ module.exports = [
  * Checkbox  同下
  * CheckboxGroup  用于设置表格 => 需要手动替换
  * Icon  对应图标需要手动替换
- * Alert antd 跟 iview 完全不同
  * Spin  需要手动替换 跟 View 实现逻辑不一样
  * Tree  手动替换
  */
+
+
+
